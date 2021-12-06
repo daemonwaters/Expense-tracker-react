@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper{
+  width: 100%;
+  height: 100%;
+  background:#F8F6F8;
+  display: flex;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.forms{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.budget{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(46, 204, 46);
+  padding: 1.5rem 0.8rem;
+  margin: 3rem 0;
+  border-radius: 3px;
+}
+
+.forms label{
+  margin: 0.4rem 0;
+}
+
+.forms input{
+  width: 95%;
+  padding: 0.5rem 0.6rem;
+  outline: none;
+  border: none;
+  background: #fff;
+  border-radius:5px;
+  margin: 0.8rem 0;
+}
+
+.forms button{
+  padding: 0.4rem 0.5rem;
+  width: fit-content;
+  margin: 0.4rem 0;
+  outline: none;
+  cursor: pointer;
+  border: solid 2px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.expense{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(201, 65, 65);
+  border-radius: 3px;
+  padding: 1.5rem 0.8rem;
+}
+
+.preview{
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin: 3rem 0;
+}
+
+.header{
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: fit-content;
 }
 
-.App-link {
-  color: #61dafb;
+.icon h3{
+  margin: 0.5rem 0;
+  font-size: 1.6rem;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo svg{
+  font-size: 4.4rem;
+  margin: 0.4rem 0;
+  padding: 0.5rem;
+  color: navy;
+}
+
+.icon p{
+  margin: 0.4rem 0;
+  font-size: 2rem;
+}
+
+#budgetText{
+  color: green;
+}
+
+#expenseText{
+  color: red;
+}
+
+
+.cart{
+  padding: 0.5rem;
+  margin: 4rem 0;
+  width: 100%;
+  height: auto;
+}
+
+.titles{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 3rem;
+  text-transform: uppercase;
+  gap: 5rem;
+}
+
+.expense-row{
+  padding: 0.5rem;
+  width: 95%;
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: red;
+}
+
+
+.remove-expense{
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,::-webkit-outer-spin-button{
+  -webkit-appearance: none;
 }
